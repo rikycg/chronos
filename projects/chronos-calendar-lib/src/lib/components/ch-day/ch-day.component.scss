@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  height: 13vw;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 125px;
+  max-height: 125px;
+  width: 13vw;
+  
+  .ch-day {
+    border: 1px solid var(--ch-color-medium-contrast);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5px;
+    width: 100%;
+
+    span {
+      font-family: var(--ch-font-semibold);
+      color: var(--ch-color-medium);
+      height: 20px;
+    }
+
+    &:hover {
+      background-color: var(--ch-color-light);
+    }
+
+    @media (max-width: 525px) {
+      align-items: center;
+      border: none;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 525px) {
+    max-height: 75px;
+  }
+}

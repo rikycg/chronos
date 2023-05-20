@@ -1,0 +1,14 @@
+<div class="month-header">
+  <span>SUN</span>
+  <span>MON</span>
+  <span>TUE</span>
+  <span>WED</span>
+  <span>THU</span>
+  <span>FRI</span>
+  <span>SAT</span>
+</div>
+<div class="month-content">
+  <div class="month-content__week" *ngFor="let week of monthCalendar.weeks">
+    <ch-day *ngFor="let day of week.days" [day]="day"/>
+  </div>
+</div>

@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/chronos-calendar-lib/src/lib/assets/styles/chronos-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -99,6 +100,42 @@
           }
         }
       }
+    },
+    "chronos-calendar-lib": {
+      "projectType": "library",
+      "root": "projects/chronos-calendar-lib",
+      "sourceRoot": "projects/chronos-calendar-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/chronos-calendar-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/chronos-calendar-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/chronos-calendar-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/chronos-calendar-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "c84f4b05-78e4-40b7-92dd-7adbf88a733f"
   }
 }

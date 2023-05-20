@@ -1,0 +1,31 @@
+<header>
+  <div class="header-left">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="header-right">
+    <span class="select-year">
+      <fa-icon icon="chevron-down"> </fa-icon>
+      {{ yearSelected }}
+      <select [(ngModel)]="yearSelected" (change)="onYearSelectorChanged()">
+        <option *ngFor="let year of yearOptions" [value]="year">
+          {{ year}}
+        </option>
+      </select>
+    </span>
+
+    <span class="select-month">
+      <fa-icon 
+        icon="chevron-left"
+        (click)="prevMonth();"
+        [class.disabled]="isFirstMonth()"
+      />
+      <p>{{ monthSelected().name }}</p>
+      <fa-icon 
+        icon="chevron-right"
+        (click)="nextMonth();" 
+        [class.disabled]="isLastMonth()"
+      />
+    </span>
+  </div>
+</header>

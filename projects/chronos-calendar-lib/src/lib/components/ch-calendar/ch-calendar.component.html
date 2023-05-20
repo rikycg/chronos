@@ -1,0 +1,10 @@
+<ch-calendar-header
+  (onMonthChanged)="onMonthChanged($event)"
+  (onYearChanged)="onYearChanged($event)"
+/>
+<main>
+  <ch-month 
+    [month]="currentMonth" 
+    [year]="currentYear"
+  />
+</main>
