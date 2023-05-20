@@ -1,27 +1,46 @@
-# Chronos
+# Chronos Calendar Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Welcome to the Chronos Calendar Library, an Angular library designed to provide a user-friendly calendar component. This library is continuously being improved to enhance its functionality and features. Currently, the library enables users to view a calendar and navigate between different months of a year.
 
-## Development server
+## Installation
+To install the Chronos Calendar Library, simply run the following command using npm:
+```
+npm i chronos-calendar-lib -S
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Usage
+Using the Chronos Calendar Library is straightforward. You need to import the `ChronosCalendarLibModule` module into your App Module and then utilize the calendar component within your template, as shown below:
+```html
+<ch-calendar></ch-calendar>
+```
 
-## Code scaffolding
+### Styles
+If you wish to import the library's styles, you can add the following line to the `angular.json` file, specifically under `architect > build > options > styles`:
+```json
+"./node_modules/chronos-calendar-lib/src/lib/assets/styles/chronos-theme.scss"
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Demo
+To see the library in action, you can use the following command to serve your Angular application:
+```
+ng serve
+```
+Afterward, open your web browser and visit [localhost:4200](http://localhost:4200) to view the demo.
 
-## Build
+## Nested Libraries
+The Chronos Calendar Library utilizes the following nested libraries to provide additional functionality:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Date-fns](https://date-fns.org/)
+- [FontAwesome](https://fontawesome.com/)
 
-## Running unit tests
+## Future Development
+In the upcoming versions of the Chronos Calendar Library, the following features will be included:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Day selection capability
+- Event handling within the calendar days
 
-## Running end-to-end tests
+We strive to make the Chronos Calendar Library even more powerful and user-friendly with each iteration.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Please feel free to reach out if you have any questions, suggestions, or feedback regarding the Chronos Calendar Library. We appreciate your support and hope you find this library useful for your Angular projects.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thank you!
